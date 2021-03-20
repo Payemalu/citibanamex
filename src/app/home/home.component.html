@@ -1,0 +1,31 @@
+﻿<div class="card-body">
+    <h1>Welcome {{currentUser.firstName}}!</h1>
+    <h3>Authorized transactions:</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.username}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.description}}</td>
+                <td>{{user.amount | currency}}</td>
+                <td>{{user.status}}</td>
+                <td><a (click)="deleteUser(user.id)" class="text-danger">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

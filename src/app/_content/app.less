@@ -1,0 +1,103 @@
+// global application styles
+@background-color: #ffffff;
+@text-color: #003f80;
+@text-hover: #5e68d6;
+
+a {
+    cursor: pointer;
+}
+
+body {
+    background: url(/src/assets/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding-bottom: 50px;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+#edges{
+    background-color: @background-color;
+    border-bottom: 3px solid #ff030b;
+    border-top: 1px solid #ff030b;
+}
+  
+nav {    
+    color: @text-color;
+    // height: 90px;
+    // z-index: 300;
+    &:hover {
+        color: @text-hover;
+    }
+    #edges
+}
+
+table {
+    background-color: @background-color;
+}
+tr, td {
+    color: @text-color;
+}
+.card-header {
+    background-color: #0c8397;
+    border-radius: 0;
+    height: 60px;
+    margin: -16px;
+}
+
+.card-header,
+h4 {
+    color: #fff;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 40px;
+    text-align: center;
+}
+.card-body {
+    background-color: #fff;
+    height: max-content;
+    margin: 22px;
+    // width: max-content;
+    overflow-x: scroll;
+}
+
+
+.main-container {
+    margin-top: 70px;
+}
+
+.img-logo {
+    width: 120px;
+}
+
+
+/* Animaciones */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
