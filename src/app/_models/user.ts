@@ -8,6 +8,6 @@ export class User {
     lastName: string;
     description: string;
     amount: number;
-    status: boolean;
+    status: string;
     token: string;
 }
